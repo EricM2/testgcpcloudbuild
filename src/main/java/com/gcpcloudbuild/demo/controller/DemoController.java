@@ -10,7 +10,8 @@ public class DemoController {
 
     @GetMapping("/{name}")
     public ResponseEntity<String> sayHi(@PathVariable  String name) {
-        String result = "Hi Mr: "+ name  + " How are you doing today";
+
+        String result = "Hi Mr: "+ name  + " How are you doing today. Just remember that we love you";
         return  ResponseEntity.ok(result);
 
     }

@@ -4,13 +4,13 @@ steps:
     args: ['clean','package','-Dmaven.test.skip=true']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-central1-docker.pkg.dev/trud-api/gcpcloudbuilddemo/gcpcloudbuild:v1',  '.']
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/trud-api/gcpcloudbuilddemo/gcpcloudbuilddemo-service:latest',  '.']
 
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-central1-docker.pkg.dev/trud-api/gcpcloudbuilddemo/gcpcloudbuild:v1']
+    args: ['push', 'us-central1-docker.pkg.dev/trud-api/gcpcloudbuilddemo/gcpcloudbuilddemo-service:latest']
 
-images: ['us-central1-docker.pkg.dev/trud-api/gcpcloudbuilddemo/gcpcloudbuild:v1']
+images: ['us-central1-docker.pkg.dev/trud-api/gcpcloudbuilddemo/gcpcloudbuilddemo-service:latest']
 
 
 
